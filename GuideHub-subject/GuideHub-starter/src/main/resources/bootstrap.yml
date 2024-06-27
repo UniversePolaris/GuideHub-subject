@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: GuideHub-subject
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:18848
+      config:
+        prefix: ${spring.application.name}
+        group: DEFAULT_GROUP
+        namespace: GuideHub
+        file-extension: yaml
+      discovery:
+        enabled: true
+        server-addr: localhost:18848
+        namespace: GuideHub
